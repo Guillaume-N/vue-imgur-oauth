@@ -10,7 +10,7 @@ export default {
       response_type: "token"
     };
 
-    window.location = `${ROOT_URL}/oauth2authorize?${qs.stringify(
+    window.location = `${ROOT_URL}/oauth2/authorize?${qs.stringify(
       queryString
     )}`;
   }
