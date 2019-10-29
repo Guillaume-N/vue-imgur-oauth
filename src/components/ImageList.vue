@@ -15,7 +15,9 @@ export default {
   computed: mapGetters(["allImages", "isLoggedIn"]),
   methods: mapActions(["fetchImages"]),
   created() {
-    this.fetchImages();
+    if (this.isLoggedIn) {
+      this.fetchImages();
+    }
   }
 };
 </script>
